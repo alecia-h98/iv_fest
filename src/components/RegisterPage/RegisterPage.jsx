@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import useStore from '../../zustand/store';
 import { PasswordInput } from '../ui/password-input';
+import { Card, Button, Field, Input, Stack } from '@chakra-ui/react';
 
 
 function RegisterPage() {
@@ -28,17 +29,28 @@ function RegisterPage() {
 
   return (
     <>
-      <h2>Register Page</h2>
+    <Card.Root maxW="md" >
+      <Card.Header>
+      <Card.Title>Register Page</Card.Title>
+      <Card.Description>
+        Input an email and password to register.
+      </Card.Description>
+      </Card.Header>
       <form onSubmit={handleRegister}>
-        <label htmlFor="username">Username:</label>
-        <input
+        <Card.Body>
+        <Stack gap="4" align="flex-start" maxW="sm">
+          <Field.Root>
+        <Field.Label htmlFor="username">Username:</Field.Label>
+        <Input
           type="text"
           id="username"
           required
           value={username}
           onChange={(e) => setUsername(e.target.value)}
         />
-        <label htmlFor="password">Password:</label>
+        </Field.Root>
+        <Field.Root>
+        <Field.Label htmlFor="password">Password:</Field.Label>
         <PasswordInput
           type="password"
           id="password"
@@ -46,15 +58,21 @@ function RegisterPage() {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button type="submit">
+        </Field.Root>
+        </Stack>
+        </Card.Body>
+        <Card.Footer justifyContent={"flex-end"}>
+        <Button type="submit">
           Register 
-        </button>
+        </Button>
+        </Card.Footer>
       </form>
       { // Conditionally render registration error:
         errorMessage && (
           <h3>{errorMessage}</h3>
         )
       }
+    </Card.Root>
     </>
   );
 }

@@ -1,9 +1,18 @@
 import { NavLink } from 'react-router-dom';
 import useStore from '../../zustand/store';
+import { useNavigate } from 'react-router-dom';
 
 
 function Nav() {
   const user = useStore((store) => store.user);
+  const logOut = useStore((state) => state.logOut);
+  const navigate = useNavigate();
+
+  const handleLogOut = () => {
+    logOut();
+    navigate('/login'); // Redirect to login page after logging out
+  }
+
 
   return (
     <nav>
