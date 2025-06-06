@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import useStore from '../../zustand/store';
 import { PasswordInput } from '../ui/password-input';
-import { Card, Button, Field, Input, Stack } from '@chakra-ui/react';
+import { Card, Button, Field, Input, Stack, AbsoluteCenter } from '@chakra-ui/react';
 
 function LoginPage() {
   const [username, setUsername] = useState('');
@@ -28,6 +28,7 @@ function LoginPage() {
 
   return (
     <>
+    <AbsoluteCenter>
       <Card.Root maxW="lg" variant={'elevated'} colorPalette={'orange'}>
       <Card.Header>
         <Card.Title size="md" >Login</Card.Title>
@@ -72,6 +73,7 @@ function LoginPage() {
         )
       }
       </Card.Root>
+      </AbsoluteCenter>
     </>
   );
 }
