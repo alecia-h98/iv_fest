@@ -29,16 +29,16 @@ function RegisterPage() {
 
   return (
     <>
-    <Card.Root maxW="md" >
+    <Card.Root maxW="lg" variant={'elevated'} colorPalette={'orange'} >
       <Card.Header>
-      <Card.Title>Register Page</Card.Title>
+      <Card.Title size="md">Register Page</Card.Title>
       <Card.Description>
         Input an email and password to register.
       </Card.Description>
       </Card.Header>
       <form onSubmit={handleRegister}>
         <Card.Body>
-        <Stack gap="4" align="flex-start" maxW="sm">
+        <Stack gap="4" align="flex-start" maxW="md">
           <Field.Root>
         <Field.Label htmlFor="username">Username:</Field.Label>
         <Input

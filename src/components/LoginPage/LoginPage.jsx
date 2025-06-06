@@ -28,16 +28,16 @@ function LoginPage() {
 
   return (
     <>
-      <Card.Root maxW="md" >
+      <Card.Root maxW="lg" variant={'elevated'} colorPalette={'orange'}>
       <Card.Header>
-        <Card.Title >Login</Card.Title>
+        <Card.Title size="md" >Login</Card.Title>
         <Card.Description>
           Please enter your email and password to log in.
         </Card.Description>
       </Card.Header>
       <form onSubmit={handleLogIn}>
          <Card.Body>
-        <Stack gap="4" align="flex-start" maxW="sm">
+        <Stack gap="4" align="flex-start" maxW="md">
           <Field.Root>
         <Field.Label htmlFor="username">Email:</Field.Label>
         <Input
