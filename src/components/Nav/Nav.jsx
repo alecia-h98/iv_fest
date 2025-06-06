@@ -35,6 +35,9 @@ function Nav() {
             <li>
               <NavLink to="/">Home</NavLink>
             </li>
+            <li>
+              <button onClick={handleLogOut}>Logout</button>
+            </li>
           </>
         )
       }
