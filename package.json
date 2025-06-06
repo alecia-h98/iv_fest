@@ -5,7 +5,6 @@
   "engines": {
     "node": ">=18.x"
   },
-
   "dependencies": {
     "@chakra-ui/react": "^3.19.2",
     "@emotion/react": "^11.14.0",

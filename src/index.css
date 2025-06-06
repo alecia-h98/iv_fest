@@ -84,10 +84,10 @@ input:focus {
   transition: 0.7s;
 }
 
-button {
+/* button {
   padding: 5px;
   margin-top: 10px;
-}
+} */
 
 button:hover, button:focus {
   outline-color: transparent;

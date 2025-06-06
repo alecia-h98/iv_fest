@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import useStore from '../../zustand/store';
+import { PasswordInput } from '../ui/password-input';
 
 
 function LoginPage() {
@@ -38,7 +39,7 @@ function LoginPage() {
           onChange={(e) => setUsername(e.target.value)}
         />
         <label htmlFor="password">Password:</label>
-        <input
+        <PasswordInput
           type="password"
           id="password"
           required
