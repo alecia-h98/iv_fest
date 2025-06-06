@@ -65,7 +65,7 @@ nav a.active {
 }
 
 /* Form Styles: */
-label {
+/* label {
   display: block;
   margin-bottom: 5px;
 }
@@ -84,21 +84,21 @@ input:focus {
   transition: 0.7s;
 }
 
-/* button {
+button {
   padding: 5px;
   margin-top: 10px;
-} */
+}
 
 button:hover, button:focus {
   outline-color: transparent;
   outline-style:solid;
   box-shadow: 0 0 3px 1px #20c997;
   transition: 0.7s;
-}
+} */
 
 /* Fun Squiggle Underline Style: */
-.squiggle {
+/* .squiggle {
   text-decoration: wavy underline;
   text-decoration-color: #20c997;
   text-decoration-thickness: 2px;
-}
+} */
