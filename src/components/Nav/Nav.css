@@ -1,0 +1,11 @@
+.eventName{
+    font-family: fluid-font;
+    font-size: 75px;
+    font-display: flex;;
+    margin-bottom: 30px;;
+}
+
+li{
+    font-size: large;
+    margin-bottom: 20px;
+}

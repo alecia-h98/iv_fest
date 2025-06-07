@@ -4,13 +4,12 @@ import {
   Route,
   Navigate
 } from "react-router-dom";
-
+import '../../index.css';
 import useStore from '../../zustand/store';
 import Nav from '../Nav/Nav';
 import HomePage from '../HomePage/HomePage';
 import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
-
 
 function App() {
   const user = useStore((state) => state.user);
@@ -23,7 +22,7 @@ function App() {
   return (
     <>
       <header>
-        <h1>IndaWeeds</h1>
+        <h1 className='eventName'>IndaWeeds</h1>
         <Nav />
       </header>
       <main>

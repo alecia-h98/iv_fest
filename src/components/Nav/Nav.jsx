@@ -1,7 +1,9 @@
 import { NavLink } from 'react-router-dom';
 import useStore from '../../zustand/store';
 import { useNavigate } from 'react-router-dom';
-
+import { Drawer, CloseButton, Portal } from '@chakra-ui/react';
+import burgerMenu from './hburgerMenu.png';
+import './Nav.css';
 
 function Nav() {
   const user = useStore((store) => store.user);
@@ -15,7 +17,17 @@ function Nav() {
 
 
   return (
-    <nav>
+    <Drawer.Root>
+      <Drawer.Trigger>
+        <img src={burgerMenu}/>
+      </Drawer.Trigger>
+    <Portal>
+      <Drawer.Backdrop />
+      <Drawer.Positioner>
+      <Drawer.Content>
+      <nav>
+        <Drawer.Header>
+        </Drawer.Header>
       <ul>
       { // User is not logged in, render these links:
         !user.id && (
@@ -43,10 +55,17 @@ function Nav() {
       }
       {/* Show these links regardless of auth status: */}
         <li>
+          {/* */}
+        </li>
+        <li>
           <NavLink to="/about">About</NavLink>
         </li>
       </ul>
     </nav>
+    </Drawer.Content>
+    </Drawer.Positioner>
+    </Portal>
+    </Drawer.Root>
   );
 }
 
